@@ -1,0 +1,258 @@
+Australia:Melbourne Cricket Ground
+England:Old Trafford Cricket Ground
+England:Lord's Cricket Ground
+England:County Cricket Ground
+New Zealand:AMI Stadium
+Wales:St Helen's
+England:Headingley Stadium
+England:The Oval Cricket Ground
+New Zealand:Carisbrook
+England:Trent Bridge Ground
+New Zealand:Basin Reserve
+Australia:Adelaide Oval
+New Zealand:Eden Park No. 1
+England:North Marine Road Ground
+Pakistan:Jinnah Stadium
+Guyana:Albion Sports Complex
+Pakistan:Zafar Ali Stadium
+Pakistan:Gaddafi Stadium
+Antigua and Barbuda:Antigua Recreation Ground
+Saint Lucia:Mindoo Phillip Park
+Pakistan:Ayub National Stadium
+Australia:Sydney Cricket Ground
+Australia:Brisbane Cricket Ground
+Pakistan:National Stadium
+Australia:Western Australian Cricket Association Ground
+Saint Vincent and the Grenadines:The Playing Fields
+New Zealand:Seddon Park
+India:Sardar Vallabhbhai Patel Stadium
+India:Gandhi Stadium
+India:Barabati Stadium
+Sri Lanka:Sinhalese Sports Club Ground
+India:Gandhi Sports Complex Ground
+India:Feroz Shah Kotla Ground
+Pakistan:Niaz Stadium
+India:M. Chinnaswamy Stadium
+Pakistan:Jinnah Stadium
+Pakistan:Ibn-e-Qasim Bagh Stadium
+Trinidad and Tobago:Queen's Park Oval
+New Zealand:McLean Park
+Grenada:Queen's Park (Old)
+Sri Lanka:Paikiasothy Saravanamuttu Stadium
+England:County Ground
+England:Grace Road
+England:County Ground
+England:County Ground
+England:County Ground
+England:Nevill Ground
+England:County Ground
+England:The Ford County Ground
+India:Lal Bahadur Shastri Stadium
+India:Sawai Mansingh Stadium
+India:Sher-i-Kashmir Stadium
+India:Moti Bagh Stadium
+India:Nehru Stadium
+India:Keenan Stadium
+India:Nehru Stadium
+Sri Lanka:Tyronne Fernando Stadium
+United Arab Emirates:Sharjah Cricket Stadium
+Jamaica:Sabina Park
+India:Jawaharlal Nehru Stadium
+India:University Stadium
+India:Sardar Patel Stadium
+Pakistan:Arbab Niaz Stadium
+Pakistan:Iqbal Stadium
+India:Nehru Stadium
+Australia:Tasmania Cricket Association Ground
+India:Vidarbha Cricket Association Ground
+India:Sector 16 Stadium
+Barbados:Kensington Oval
+Pakistan:Pindi Club Ground
+Australia:North Tasmania Cricket Association Ground
+Sri Lanka:Asgiriya Stadium
+Sri Lanka:Ranasinghe Premadasa Stadium
+India:Madhavrao Scindia Cricket Ground
+India:Modi Stadium
+India:Wankhede Stadium
+Australia:Formby Recreation Ground
+India:Eden Gardens
+India:M. A. Chidambaram Stadium
+Australia:Bellerive Oval
+India:Nahar Singh Stadium
+India:Captain Roop Singh Stadium
+Guyana:Bourda
+Bangladesh:MA Aziz Stadium
+Bangladesh:Bangabandhu National Stadium
+India:Indira Priyadarshini Stadium
+India:Brabourne Stadium
+India:Nehru Stadium
+India:K.D. Singh Babu Stadium
+Pakistan:Sports Stadium
+Pakistan:Rawalpindi Cricket Stadium
+New Zealand:Pukekura Park
+Australia:Ray Mitchell Oval
+Australia:Eastern Oval
+Australia:Manuka Oval
+Australia:Berri Oval
+Australia:Lavington Sports Oval
+Zimbabwe:Harare Sports Club
+Zimbabwe:Bulawayo Athletic Club
+South Africa:Sahara Park Newlands
+South Africa:Axxess DSL St. Georges
+South Africa:SuperSport Park
+South Africa:New Wanderers Stadium
+South Africa:Goodyear Park
+South Africa:Sahara Stadium, Kingsmead
+South Africa:Buffalo Park
+India:Moin-ul-Haq Stadium
+India:Punjab Cricket Association Stadium
+India:Reliance Stadium
+Singapore:The Padang
+Canada:Toronto Cricket, Skating and Curling Club
+Kenya:Gymkhana Club Ground
+Kenya:Nairobi Club Ground
+Kenya:Aga Khan Sports Club Ground
+Pakistan:Bugti Stadium
+Zimbabwe:Queens Sports Club
+South Africa:Boland Park
+South Africa:Willowmoore Park
+India:Nehru Stadium
+South Africa:De Beers Diamond Oval
+Pakistan:Sheikhupura Stadium
+New Zealand:Owen Delany Park
+Grenada:National Cricket Stadium
+England:County Ground
+England:St Lawrence Ground
+England:County Ground
+Wales:SWALEC Stadium
+England:County Ground
+Ireland:Castle Avenue
+Scotland:Grange CC Ground, Raeburn Place
+Netherlands:VRA Cricket Ground
+Sri Lanka:Galle International Stadium
+Singapore:Kallang Ground
+New Zealand:Westpac Stadium
+Australia:Docklands Stadium
+South Africa:North West Cricket Stadium
+India:Barkatullah Khan Stadium
+Sri Lanka:Rangiri Dambulla International Stadium
+Kenya:Simba Union Ground
+Saint Lucia:Beausejour
+Saint Lucia:Darren Sammy National Cricket Stadium, Gros Islet, St Lucia
+Morocco:National Cricket Stadium
+India:Indira Gandhi Stadium
+Zimbabwe:Kwekwe Sports Club
+New Zealand:Queenstown Events Centre
+South Africa:City Oval
+England:Rose Bowl
+Australia:Bundaberg Rum Stadium
+Australia:Marrara Oval
+Pakistan:Multan Cricket Stadium
+India:Dr YS Rajasekhara Reddy Andhra CA-Visakhapatnam District CA Cricket Stadium
+India:Rajiv Gandhi International Cricket Stadium
+Bangladesh:Shaheed Chandu Stadium
+Bangladesh:Chittagong Divisional Stadium
+Bangladesh:Khulna Divisional Stadium
+Bangladesh:Narayanganj Osmani Stadium
+India:Holkar Cricket Stadium
+United Arab Emirates:Sheikh Zayed Cricket Stadium
+Saint Kitts and Nevis:Warner Park
+Northern Ireland:Civil Service Cricket Club
+Scotland:Cambusdoon New Ground
+Malaysia:Kinrara Academy Oval
+Kenya:Mombasa Sports Club Ground
+Bangladesh:Shere-e-Bangla Stadium
+Kenya:Jaffery Sports Club Ground
+Kenya:Ruaraka Sports Club Ground
+Antigua and Barbuda:Sir Vivian Richards Stadium
+Guyana:Providence Stadium
+Scotland:Titwood
+Netherlands:Hazelaarweg Stadion
+Canada:Maple Leaf North-West Ground
+Scotland:Mannofield Park
+United Arab Emirates:Dubai International Cricket Stadium
+Dominica:Windsor Park
+India:Vidarbha Cricket Association Stadium
+New Zealand:University Oval
+Netherlands:Sportpark Westvliet
+Netherlands:Sportpark Thurlede
+Sri Lanka:Mahinda Rajapaksa International Stadium
+Sri Lanka:Pallekele International Cricket Stadium
+Netherlands:Sportpark Duivesteijn
+New Zealand:Cobham Oval
+India:Saurashtra Cricket Association Stadium
+India:JSCA International Cricket Stadium
+India:HPCA Stadium
+United Arab Emirates:ICC Global Cricket Academy
+Ireland:Malahide
+India:Subrata Roy Sahara Stadium
+New Zealand:Saxton Oval
+New Zealand:Hagley Oval
+New Zealand:Bert Sutcliffe Oval
+New Zealand:Bay Oval
+Malaysia:Bayuemas Oval
+Australia:Tony Ireland Stadium
+Scotland:Edinburgh Cricket Ground, Edinburgh
+Pakistan:Sports Stadium, Sargodha
+England:Kennington Oval, London
+Saint Vincent and the Grenadines:Arnos Vale Ground, Kingstown, St Vincent
+Sri Lanka:P Sara Oval, Colombo
+Dominica:Windsor Park, Roseau, Dominica
+New Zealand:Eden Park, Auckland
+India:Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium, Visakhapatnam
+Grenada:National Cricket Stadium, St George's, Grenada
+Australia:Cazaly's Stadium, Cairns
+Jamaica:Sabina Park, Kingston, Jamaica
+England:Riverside Ground, Chester-le-Street
+Netherlands:Hazelaarweg, Rotterdam
+Sri Lanka:R.Premadasa Stadium, Colombo
+South Africa:St George's Park, Port Elizabeth
+Pakistan:National Stadium, Karachi
+England:Nevill Ground, Tunbridge Wells
+Wales:Sophia Gardens, Cardiff
+Bangladesh:Khan Shaheb Osman Ali Stadium, Fatullah
+India:Molana Azad Stadium, Jammu
+South Africa:Wanderers Cricket Ground, Windhoek
+India:MA Chidambaram Stadium, Chennai
+Bangladesh:Sylhet International Cricket Stadium, Sylhet
+England:Mangaung Oval, Bloemfontein
+South Africa:Buffalo Park, East London
+England:Edgbaston, Birmingham
+Guyana:Bourda, Georgetown, Guyana
+Morocco:National Cricket Stadium, Tangier
+South Africa:Diamond Oval, Kimberley
+India:Green Park, Kanpur
+Scotland:Grange Cricket Club, Edinburgh
+England:Uxbridge Cricket Club Ground, Uxbridge
+Netherlands:Sportpark Het Schootsveld, Deventer
+South Africa:Senwes Park, Potchefstroom
+England:New Road, Worcester
+England:Devonport Oval, Devonport
+Saint Lucia:Mindoo Phillip Park, Castries, St Lucia
+Ireland:The Village, Dublin
+India:Maharashtra Cricket Association Stadium, Pune
+Australia:W.A.C.A. Ground, Perth
+India:Himachal Pradesh Cricket Association Stadium, Dharamsala
+South Africa:Kingsmead, Durban
+Bangladesh:Zahur Ahmed Chowdhury Stadium, Chittagong
+India:Dr DY Patil Sports Academy, Mumbai
+Canada:Toronto CSCC, Toronto
+Australia:Marrara Cricket Ground, Darwin
+Bangladesh:Sheikh Abu Naser Stadium, Khulna
+Ireland:Bready Cricket Club, Bready, Northern Ireland
+Saint Kitts and Nevis:Warner Park, Basseterre, St Kitts
+South Africa:The Wanderers Stadium, Johannesburg
+Antigua and Barbuda:Antigua Recreation Ground, St John's, Antigua
+Australia:Harrup Park, Mackay
+South Africa:Newlands, Cape Town
+Ireland:Observatory Lane, Dublin
+Bangladesh:Khan Shaheb Osman Ali Outer Stadium, Fatullah
+New Zealand:Pukekura Park, New Plymouth
+England:The Cooper Associates County Ground, Taunton
+India:DRIEMS Ground, Cuttack
+England:Louth Cricket Club, Louth
+Australia:Endeavour Park, Townsville, Townsville
+England:Haslegrave Ground, Loughborough
+India:Middle Income Group Ground, Mumbai
+India:Bandra Kurla Complex, Mumbai
+Australia:Endeavour Park No. 2, Townsville, Townsville
