@@ -57,8 +57,49 @@ def file_process(path):
 		except AssertionError:
 			loge('AssertionError - innings part: ' + path)
 		for key in innings:
-			#TODO
-#{36.2: {'runs': {'total': 0, 'extras': 0, 'batsman': 0}, 'bowler': 'Naeem Islam', 'batsman': 'MJ Prior', 'non_striker': 'PD Collingwood'}}
+			assert len(key) == 1, 'each innings is single dictionary'
+			each_innings, top_details = key.popitem()
+			print(each_innings)
+
+			team = top_details['team']
+			deliveries = top_details['deliveries']
+			
+			for delivery in deliveries:
+				ball, details = delivery.popitem()
+				print(ball)
+
+				assert len(details) < 6, 'bowler, batsman, nonstriker, runs and wicket'
+				bowler = details.pop('bowler')
+				batsman = details.pop('batsman')
+				non_striker = details.pop('non_striker')
+				runs = details.pop('runs')
+				try:
+					wicket = details.pop('wicket')
+					wickettype = wicket.pop('kind')
+					wicketperson = wicket.pop('player_out')
+				except KeyError:
+					wickettype = ''
+					wicketperson = ''
+				extras = runs.pop('extras')
+				runbybat = runs.pop('batsman')
+				total_per_ball = runs.pop('total')
+
+				print(
+					'team: ', team,
+					'bowler: ', bowler,
+					'batsman: ', batsman,
+					'non_striker: ', non_striker,
+					'extras: ', extras,
+					'runbybat: ', runbybat,
+					'total_per_ball: ', total_per_ball,
+					'wicketperson: ', wicketperson,
+					'wickettype: ', wickettype
+					)
+				print('\n\n')
+
+
+
+
 class process(threading.Thread):
 	"""Class process each file saperatly in a thread"""
 	def __init__(self, path):
