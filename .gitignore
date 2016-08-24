@@ -1,6 +1,3 @@
-# some project specific files
-*.out
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -8,10 +5,6 @@ __pycache__/
 
 # C extensions
 *.so
-
-# misc extention
-*.zip
-*.swp
 
 # Distribution / packaging
 .Python
@@ -58,6 +51,14 @@ coverage.xml
 
 # Django stuff:
 *.log
+local_settings.py
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
 
 # Sphinx documentation
 docs/_build/
@@ -65,5 +66,25 @@ docs/_build/
 # PyBuilder
 target/
 
-#Ipython Notebook
+# IPython Notebook
 .ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# dotenv
+.env
+
+# virtualenv
+venv/
+ENV/
+
+# Spyder project settings
+.spyderproject
+
+# Rope project settings
+.ropeproject
+
