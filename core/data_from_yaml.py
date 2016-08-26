@@ -16,14 +16,18 @@ logw = root.warning
 logc = root.critical
 loge = root.error
 
-
-
+#remove after use
+player_name = []
+filecount = 0
 
 path = 'ODI.yaml/'
 info_keys = {'match_type', 'outcome', 'dates', 'overs', 'gender',
 	'toss', 'player_of_match', 'venue', 'teams'}
 
-def file_process(path):
+def file_process(path, self):
+	#remove after need
+	global player_name
+
 	logd('opening' + path)
 	with open(path) as f:
 		yaml_out = load(f)
@@ -47,55 +51,77 @@ def file_process(path):
 				logw(path + ' doesnt have ' + str(dont_have_value))
 		except AssertionError:
 			loge('AssertionError - info part: ' + path)
-
-
-		#assertion for innings
+		dates = info['dates'][0]
+		gender = info['gender']
+		team1 = info['teams'][0]
+		team2 = info['teams'][1]
+		toss_winner = info['toss']['winner']
+		toss_decision = info['toss']['decision']
 		try:
-			assert len(innings) == 2, 'two innings per match'
-			assert isinstance(innings, list)
-			#TODO
-		except AssertionError:
-			loge('AssertionError - innings part: ' + path)
-		for key in innings:
-			assert len(key) == 1, 'each innings is single dictionary'
-			each_innings, top_details = key.popitem()
-			print(each_innings)
+			outcome = info['outcome']['by']
+		except KeyError:
+			outcome = ''
+		venue = info['venue']
+		try:
+			player_of_match = ' '.join(info['player_of_match'])
+		except KeyError:
+			player_of_match = ''
+		print(self.count, dates)
 
-			team = top_details['team']
-			deliveries = top_details['deliveries']
-			
-			for delivery in deliveries:
-				ball, details = delivery.popitem()
-				print(ball)
+		if gender.strip() == 'male':
+			#assertion for innings
+			try:
+				assert len(innings) == 2, 'two innings per match'
+				assert isinstance(innings, list), 'innings is not a list'
+				#TODO
+			except AssertionError as e:
+				loge('AssertionError - innings part: ' + path + ' ' + str(e))
+			for key in innings:
+				assert len(key) == 1, 'each innings is single dictionary'
+				each_innings, top_details = key.popitem()
 
-				assert len(details) < 6, 'bowler, batsman, nonstriker, runs and wicket'
-				bowler = details.pop('bowler')
-				batsman = details.pop('batsman')
-				non_striker = details.pop('non_striker')
-				runs = details.pop('runs')
-				try:
-					wicket = details.pop('wicket')
-					wickettype = wicket.pop('kind')
-					wicketperson = wicket.pop('player_out')
-				except KeyError:
-					wickettype = ''
-					wicketperson = ''
-				extras = runs.pop('extras')
-				runbybat = runs.pop('batsman')
-				total_per_ball = runs.pop('total')
+				team = top_details['team']
+				deliveries = top_details['deliveries']
+				
+				for delivery in deliveries:
+					ball, details = delivery.popitem()
+					bowler = details.pop('bowler')
+					batsman = details.pop('batsman')
+					non_striker = details.pop('non_striker')
+					runs = details.pop('runs')
+					try:
+						wicket = details.pop('wicket')
+						wickettype = wicket.pop('kind')
+						wicketperson = wicket.pop('player_out')
+					except KeyError:
+						wickettype = ''
+						wicketperson = ''
+					extras = runs.pop('extras')
+					if extras:
+						extras_type = list(details.pop('extras'))[0]
+					else:
+						extras_type = ''
+					runbybatsman = runs.pop('batsman')
+					total_per_ball = runs.pop('total')
 
-				print(
-					'team: ', team,
-					'bowler: ', bowler,
-					'batsman: ', batsman,
-					'non_striker: ', non_striker,
-					'extras: ', extras,
-					'runbybat: ', runbybat,
-					'total_per_ball: ', total_per_ball,
-					'wicketperson: ', wicketperson,
-					'wickettype: ', wickettype
-					)
-				print('\n\n')
+
+					detail_dict = {
+						'team: ', team,
+						'bowler: ', bowler,
+						'batsman: ', batsman,
+						'non_striker: ', non_striker,
+						'extras: ', extras,
+						'runbybatsman: ', runbybatsman,
+						'total_per_ball: ', total_per_ball,
+						'wicketperson: ', wicketperson,
+						'wickettype: ', wickettype,
+						'extras_type: ', extras_type
+						}
+					player_name.append(bowler)
+					player_name.append(batsman)
+					player_name = list(set(player_name))
+		else:
+			logi('Female game: ' + str(dates) + ' ' + team1 + team2 +gender)
 
 
 
@@ -107,8 +133,11 @@ class process(threading.Thread):
 		self.path = path
 
 	def run(self):
+		global filecount
+		filecount += 1
+		self.count = filecount
 		logd('Next Tread')
-		file_process(self.path)
+		file_process(self.path, self)
 		
 count = 0
 for file in os.listdir(path):
@@ -117,4 +146,8 @@ for file in os.listdir(path):
 	if not count%5:
 		logd('waiting for reducing the load')
 		logi('Number of threads: ' + str(threading.active_count()))
-		time.sleep(1)
+		time.sleep(2)
+while (threading.active_count() - 1):
+	time.sleep(10)
+for val in player_name:
+	print(val)
