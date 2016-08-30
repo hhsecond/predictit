@@ -1,4 +1,5 @@
 import os, threading, time, logging, sys
+import numpy as np
 from yaml import load, dump
 
 flog = open('data_from_yaml.log', 'w+')
@@ -23,6 +24,9 @@ filecount = 0
 path = 'ODI.yaml/'
 info_keys = {'match_type', 'outcome', 'dates', 'overs', 'gender',
 	'toss', 'player_of_match', 'venue', 'teams'}
+
+
+features = np.array()
 
 def file_process(path, self):
 	#remove after need
