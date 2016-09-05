@@ -17,20 +17,18 @@ logw = root.warning
 logc = root.critical
 loge = root.error
 
-#remove after use
-player_name = []
 filecount = 0
 
 path = 'ODI.yaml/'
 info_keys = {'match_type', 'outcome', 'dates', 'overs', 'gender',
 	'toss', 'player_of_match', 'venue', 'teams'}
 
+lock = threading.Lock()
+features = np.array([])
 
-features = np.array()
 
 def file_process(path, self):
-	#remove after need
-	global player_name
+	featurelist = []
 
 	logd('opening' + path)
 	with open(path) as f:
@@ -72,7 +70,9 @@ def file_process(path, self):
 			player_of_match = ''
 		print(self.count, dates)
 
+
 		if gender.strip() == 'male':
+			featurelist = [dates, team1, team2, toss_winner, toss_decision]
 			#assertion for innings
 			try:
 				assert len(innings) == 2, 'two innings per match'
@@ -86,6 +86,8 @@ def file_process(path, self):
 
 				team = top_details['team']
 				deliveries = top_details['deliveries']
+				if team != team1 and team != team2:
+					raise("team names are not matched: " + path)
 				
 				for delivery in deliveries:
 					ball, details = delivery.popitem()
@@ -121,9 +123,6 @@ def file_process(path, self):
 						'wickettype: ', wickettype,
 						'extras_type: ', extras_type
 						}
-					player_name.append(bowler)
-					player_name.append(batsman)
-					player_name = list(set(player_name))
 		else:
 			logi('Female game: ' + str(dates) + ' ' + team1 + team2 +gender)
 
@@ -147,11 +146,9 @@ count = 0
 for file in os.listdir(path):
 	count += 1
 	process(path+file).start()
-	if not count%5:
+	if not count%2:
 		logd('waiting for reducing the load')
 		logi('Number of threads: ' + str(threading.active_count()))
-		time.sleep(2)
+		time.sleep(1)
 while (threading.active_count() - 1):
 	time.sleep(10)
-for val in player_name:
-	print(val)
