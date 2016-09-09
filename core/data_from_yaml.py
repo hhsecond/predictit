@@ -1,4 +1,4 @@
-import os, threading, time, logging, sys
+import os, threading, time, logging, sys, datalist
 import numpy as np
 from yaml import load, dump
 
@@ -24,10 +24,11 @@ info_keys = {'match_type', 'outcome', 'dates', 'overs', 'gender',
 	'toss', 'player_of_match', 'venue', 'teams'}
 
 lock = threading.Lock()
-features = np.array([])
+features = np.empty((0,12))
 
 
 def file_process(path, self):
+	global features
 	featurelist = []
 
 	logd('opening' + path)
@@ -61,18 +62,22 @@ def file_process(path, self):
 		toss_decision = info['toss']['decision']
 		try:
 			outcome = info['outcome']['by']
-		except KeyError:
-			outcome = ''
+			winner = info['outcome']['winner']
+		except KeyError as e:
+			print('exception: ', e)
+			exit()
 		venue = info['venue']
 		try:
 			player_of_match = ' '.join(info['player_of_match'])
 		except KeyError:
 			player_of_match = ''
-		print(self.count, dates)
+		print(self.count, dates, path)
 
 
 		if gender.strip() == 'male':
-			featurelist = [dates, team1, team2, toss_winner, toss_decision]
+			host_country = datalist.venue_list[venue]
+			featurelist = [path.split('/')[1], dates, team1, team2, host_country, toss_winner, toss_decision, winner]
+
 			#assertion for innings
 			try:
 				assert len(innings) == 2, 'two innings per match'
@@ -81,13 +86,13 @@ def file_process(path, self):
 			except AssertionError as e:
 				loge('AssertionError - innings part: ' + path + ' ' + str(e))
 			for key in innings:
+				total_score = 0
+				total_wickets = 0
 				assert len(key) == 1, 'each innings is single dictionary'
 				each_innings, top_details = key.popitem()
 
 				team = top_details['team']
 				deliveries = top_details['deliveries']
-				if team != team1 and team != team2:
-					raise("team names are not matched: " + path)
 				
 				for delivery in deliveries:
 					ball, details = delivery.popitem()
@@ -123,6 +128,26 @@ def file_process(path, self):
 						'wickettype: ', wickettype,
 						'extras_type: ', extras_type
 						}
+					total_score += total_per_ball
+
+					if wickettype:
+						total_wickets += 1
+				
+				if team == team1:
+					team1score = total_score
+					team1wickets = total_wickets
+				elif team == team2:
+					team2score = total_score
+					team2wickets = total_wickets
+				else:
+					raise("team names are not matched: " + path)
+
+			featurelist.append(team1score)
+			featurelist.append(team2score)
+			featurelist.append(team1wickets)
+			featurelist.append(team2wickets)
+
+			features = np.append(features, [featurelist], axis=0)
 		else:
 			logi('Female game: ' + str(dates) + ' ' + team1 + team2 +gender)
 
@@ -152,3 +177,7 @@ for file in os.listdir(path):
 		time.sleep(1)
 while (threading.active_count() - 1):
 	time.sleep(10)
+
+
+np.save('features.npy', features)
+
