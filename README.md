@@ -19,7 +19,7 @@ Ex.
 ## records that i avoided
 + Records that has T20 and Test in the url
 + Records that has women, u19, XI in the team name
-+ Matches that are abondoned or doesnot have winner name in toss result field
++ Matches that are abandoned or doesnot have winner name in toss result field
 + matches which stadium name i could not map with a country - almost 800 matches
 
 ## Important links to NLP
